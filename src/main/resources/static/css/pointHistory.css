@@ -1,0 +1,224 @@
+@charset "UTF-8";
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    min-height: 100vh;
+    
+}
+
+.sidebar {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 200px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    height: calc(100vh - 100px);
+}
+
+.sidebar h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #e1e1e1;
+}
+
+.delete-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #e60000;
+}
+
+.content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.button-group a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    transition: background-color 0.3s;
+}
+
+.button-group a:hover {
+    background-color: #0056b3;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    width: 200px; /* Set fixed width for columns */
+    height: 50px; /* Set fixed height for rows */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
+
+.neutral {
+    color: black; /* 기본 색상, 필요에 따라 조정 */
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination a, .pagination span {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    background-color: #ffffff;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #f1f1f1;
+    border-color: #bbb;
+}
+
+.pagination a.disabled {
+    color: #ccc;
+    pointer-events: none;
+}
+
+.pagination .current {
+    background-color: #007bff;
+    color: #ffffff;
+    border-color: #007bff;
+    font-weight: bold;
+}
+
+.pagination .current:hover {
+    background-color: #0056b3;
+    border-color: #004080;
+}
+.sortable {
+    cursor: pointer;
+    align-items: center;
+}
+
+.sortable .arrowup, .sortable .arrowdown {
+    margin-left: 5px;
+    font-size: 12px;
+    color: #ccc; /* 기본 상태의 얕은 회색 */
+    font-weight: bold; /* 화살표를 더 굵게 표시 */
+    margin: -2px;
+}
+
+.sortable .arrowup.asc::before {
+    content: "▲";
+    color: #007bff; /* 정렬 방향이 'asc'인 경우 파란색 */
+}
+.sortable .arrowdown.asc::before {
+    content: "▼";
+}
+
+
+.sortable .arrowup.desc::before {
+    content: "▲";
+}
+.sortable .arrowdown.desc::before {
+    content: "▼";
+    color: #007bff; /* 정렬 방향이 'asc'인 경우 파란색 */
+}
+
+.sortable .arrowup.default::before  {
+    content: "▲▼"; /* 기본 상태에 대한 표시 */
+    color: #ccc; /* 기본 상태의 얕은 회색 */
+}
+
+/* 활성화된 정렬 화살표 스타일 */
+.sortable.active .arrow.asc::before {
+    color: #007bff; /* 정렬 방향이 'asc'인 경우 파란색 */
+}
+
+.sortable.active .arrow.desc::before {
+    color: #007bff; /* 정렬 방향이 'desc'인 경우 파란색 */
+}
