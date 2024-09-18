@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.library.bookwave.dto.BookDetailReviewDTO;
 import com.library.bookwave.dto.BookListDTO;
 import com.library.bookwave.repository.model.Book;
 import com.library.bookwave.repository.model.Favorite;
@@ -99,6 +100,10 @@ public class BookController {
 		// ebook 등록 여부조회
 		int userEbook = bookService.readUserEbook(userId, bookId);
 		
+		List<BookDetailReviewDTO> review = bookService.readReviewAndUserNameByBookId(bookId);
+		
+		
+		model.addAttribute("review",review);
 		model.addAttribute("userEbook",userEbook);
 		model.addAttribute("isFavorited", isFavorited);
 		model.addAttribute("isLiked", isLiked);

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.library.bookwave.dto.BookDetailReviewDTO;
 import com.library.bookwave.dto.BookListDTO;
 import com.library.bookwave.repository.interfaces.BookRepository;
 import com.library.bookwave.repository.model.Book;
@@ -216,5 +217,15 @@ public class BookService {
 			e.printStackTrace();
 		}
 		return userEbook;
+	}
+	
+	public List<BookDetailReviewDTO> readReviewAndUserNameByBookId (Integer bookId) {
+		List<BookDetailReviewDTO> bookDetailReviewDTO = null;
+		try {
+			bookDetailReviewDTO = bookRepository.readReviewAndUserNameByBookId(bookId);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return bookDetailReviewDTO;
 	}
 }

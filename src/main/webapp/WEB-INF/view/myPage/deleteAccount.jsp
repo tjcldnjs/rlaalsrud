@@ -13,7 +13,7 @@
         <p>회원 탈퇴를 진행하시려면 비밀번호를 입력해 주세요. 이 작업은 되돌릴 수 없습니다.</p>
 
         <div class="container">
-            <form id="deleteAccountForm" action="/user/deleteAccount" method="post" onsubmit="return handleFormSubmit(event)">
+            <form id="deleteAccountForm" action="/user-info/deleteAccount" method="post" onsubmit="return handleFormSubmit(event)">
                 <div class="form-group">
                     <label for="password">비밀번호</label> 
                     <input type="password" id="password" name="password" required>
@@ -33,7 +33,7 @@
             const formData = new FormData(document.getElementById('deleteAccountForm'));
 
             // Send form data using Fetch API
-            fetch('/user/deleteAccount', {
+            fetch('/user-info/deleteAccount', {
                 method: 'POST',
                 body: formData
             })

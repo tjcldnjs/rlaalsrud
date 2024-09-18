@@ -5,10 +5,10 @@
 <body>
 		<div class="sidebar">
 			<h3>나의 계정</h3>
-			<a href="/user/mypageAuth">개인정보 수정</a> 
-			<a href="/user/pointHistory">포인트 내역 조회</a> 
-			<a href="/user/paymentHistory">결제 내역</a> 
-			<a class="delete-btn" onclick="window.open('/user/deleteAccount', '_blank', 'width=800,height=500,resizable=no')">회원탈퇴</a>
+			<a href="/user-info/mypageAuth">개인정보 수정</a> 
+			<a href="/user-info/pointHistory">포인트 내역 조회</a> 
+			<a href="/user-info/paymentHistory">결제 내역</a> 
+			<a class="delete-btn" onclick="window.open('/user-info/deleteAccount', '_blank', 'width=800,height=500,resizable=no')">회원탈퇴</a>
 		</div>
 		
 		<div class="content">
@@ -17,7 +17,7 @@
 
 
 	<div class="container">
-		<form action="/user/mypageAuth" method="post">
+		<form action="/user-info/mypageAuth" method="post">
 			<div class="form-group">
 				<label for="id">아이디</label> <input type="text" id="id" name="id" value="${user.loginId}" readonly disabled="disabled">
 			</div>

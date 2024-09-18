@@ -1,100 +1,101 @@
 @charset "UTF-8";
+
 body {
-	font-family: Arial, sans-serif;
-	background-color: #f4f4f4;
-	margin: 0;
-	padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
 }
 
 .container {
-	max-width: 900px;
-	margin: 0 auto;
-	background: #fff;
-	padding: 20px;
-	border-radius: 8px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-	position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .book--cover {
-	width: 200px;
-	height: auto;
-	border-radius: 5px;
-	margin-right: 20px;
-	float: left;
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+    float: left;
 }
 
 .book--details {
-	overflow: hidden;
+    overflow: hidden;
 }
 
 .book--title {
-	font-size: 24px;
-	margin-top: 0;
+    font-size: 24px;
+    margin-top: 0;
 }
 
 .book--info {
-	margin-top: 10px;
+    margin-top: 10px;
 }
 
 .book--info dt {
-	font-weight: bold;
-	margin-top: 10px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 .book--info dd {
-	margin: 0 0 10px 0;
+    margin: 0 0 10px 0;
 }
 
 .description {
-	margin-top: 20px;
+    margin-top: 20px;
 }
 
 .back--link {
-	display: inline-block;
-	margin-top: 20px;
-	font-size: 14px;
-	color: #007bff;
-	text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
 }
 
 .back--link:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
-.lend--button, .sub--ebook--button, .ebook--button, .read--ebook--button{
-	background-color: #218838;
-	display: inline-block;
-	margin-top: 20px;
-	padding: 10px 20px;
-	font-size: 14px;
-	color: #fff;
-	text-decoration: none;
-	border-radius: 5px;
-	cursor: pointer;
-	border: none; /* Remove default border */
+.lend--button, .sub--ebook--button, .ebook--button, .read--ebook--button {
+    background-color: #218838;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none; /* Remove default border */
 }
 
 .lend--button:hover {
-	background-color: #218838;
+    background-color: #218838;
 }
 
 .lend--button.disabled {
-	background-color: #6c757d;
-	cursor: not-allowed;
-	pointer-events: none;
-	border: none; /* Remove default border */
-	cursor: default;
+    background-color: #6c757d;
+    cursor: not-allowed;
+    pointer-events: none;
+    border: none; /* Remove default border */
+    cursor: default;
 }
 
 .lend--button.renting {
-	background-color: #FFA500; /* 대여 중 색상 */
-	cursor: default;
+    background-color: #FFA500; /* 대여 중 색상 */
+    cursor: default;
 }
 
 .lend--button.unavailable {
-	background-color: #6c757d; /* 대여 불가 색상 */
-	cursor: default;
+    background-color: #6c757d; /* 대여 불가 색상 */
+    cursor: default;
 }
 
 .reserve--button {
@@ -125,11 +126,11 @@ body {
 }
 
 .button--group {
-	margin-top: 20px;
+    margin-top: 20px;
 }
 
 .button--group button {
-	margin-right: 10px; /* 버튼 사이에 간격 추가 */
+    margin-right: 10px; /* 버튼 사이에 간격 추가 */
 }
 
 .favorite--button {
@@ -156,24 +157,112 @@ body {
 }
 
 .like--button {
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
-	width: 40px;
-	height: 40px;
-	background-color: #fff;
-	border: 2px solid #007bff;
-	border-radius: 50%;
-	color: #007bff;
-	font-size: 20px;
-	text-align: center;
-	line-height: 36px;
-	cursor: pointer;
-	transition: background-color 0.3s, color 0.3s;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    color: #007bff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 36px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .like--button.liked {
-	background-color: #007bff;
-	color: #fff;
-	border-color: #007bff;
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
 }
+/* 리뷰 관련 스타일 수정 */
+.reviews {
+	 max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff; /* White background for contrast */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e1e1e1; /* Subtle border */
+    width: 100%; /* Match width of container */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.reviews h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #007bff; /* Underline effect */
+    padding-bottom: 10px;
+}
+
+.review-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.review-item {
+    background-color: #f9f9f9; /* Light background for each review */
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-item:hover {
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.review-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff; /* Color for review title */
+    margin: 0;
+}
+
+.review-score {
+    font-size: 16px;
+    color: #f39c12; /* Gold color for score */
+    font-weight: bold;
+}
+
+.review-author {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
+.review-date {
+	text-align:right;
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.review-content {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6; /* Improved readability */
+    border-left: 4px solid #007bff; /* Left border to emphasize content */
+    padding-left: 10px;
+    background-color: #f1f1f1; /* Light gray background for content */
+    border-radius: 3px; /* Rounded corners for content */
+    padding: 10px; /* Added padding for better spacing */
+}
+
+.star {
+    font-size: 20px; /* Size of the stars */
+    color: #FFD700; /* Gold color for filled stars */
+}
+
+.star.half {
+    color: #ccc; /* Color for half-filled stars */
+}
+
+

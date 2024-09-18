@@ -1,6 +1,13 @@
 -- 샘플 데이터 sql
 insert into user_tb values (2, 'tjcldnjs', null, '$2a$10$nWhzx2zhSBqYUp.yKuAvW.FfXXVSp5iwvpkJzeggLKzBC6iST1D7y','서치원','USER', 0, now());
 insert into user_detail_tb values(2,'fasd1@naver.com','1936-09-16',0,'010-4578-7878','05831','서울 송파구 동남로','100동');
+insert into review_tb (user_id,book_id,score,content,created_at)values(2,1,4.6,'존나꿀잼',now());
+insert into review_tb (user_id,book_id,score,content,created_at)values(2,1,4.6,'존나꿀잼',now());
+insert into review_tb (user_id,book_id,score,content,created_at)values(2,1,4.6,'존나꿀잼',now());
+insert into review_tb (user_id,book_id,score,content,created_at)values(2,1,4.6,'존나꿀잼',now());
+insert into review_tb (user_id,book_id,score,content,created_at)values(2,1,4.6,'존나꿀잼',now());
+insert into review_tb (user_id,book_id,score,content,created_at)values(2,1,4.6,'존나꿀잼',now());
+insert into review_tb (user_id,book_id,score,content,created_at)values(2,1,4.6,'존나꿀잼',now());
 
 insert into balance_history_tb (user_id,wave_change,mileage_change,description,created_at) values (2,-26000,-654,'대여',now());
 insert into balance_history_tb (user_id,wave_change,mileage_change,description,created_at) values (2,-20040,-654,'대여',now());

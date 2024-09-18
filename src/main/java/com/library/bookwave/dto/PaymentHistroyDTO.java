@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper=false)
 @Builder
-public class Payment2DTO extends ValueFormatter {
+public class PaymentHistroyDTO extends ValueFormatter {
 	private Integer id;
 	private String paymentKey; // 결제 키 (결제 승인, 조회, 취소 API에 사용)
 	private String type; // 결제 타입 (일반, 자동, 브랜드페이)

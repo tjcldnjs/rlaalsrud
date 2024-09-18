@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function changePassword(){
 		const currentPassword = currentPasswordInput.value;
 		const newPassword = passwordInput.value;
-		fetch(`/user/changePassword`, {
+		fetch(`/user-info/changePassword`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

@@ -108,6 +108,37 @@
 
 		<!-- 좋아요 버튼 -->
 		<button type="button" class="like--button ${isLiked ? 'liked' : ''}" data-book-id="${book.id}" data-liked="${isLiked}">&#128077;</button>
-
 	</div>
+		
+		<!-- 리뷰 항목 출력 -->
+		<div class="reviews">
+            <h2>리뷰 목록</h2>
+<c:forEach var="review" items="${review}">
+    <div class="review-item">
+        <div class="review-author">작성자 : ${review.name}</div>
+        <div class="review-score">
+            <c:forEach var="i" begin="1" end="5">
+                <c:choose>
+                    <c:when test="${i <= review.score}">
+                        <span class="star filled">&#9733;</span> <!-- Filled star -->
+                    </c:when>
+                    <c:otherwise>
+                        <c:choose>
+                            <c:when test="${review.score + 1 == i}">
+                                <span class="star half">&#9734;</span> <!-- Half-filled star -->
+                            </c:when>
+                            <c:otherwise>
+                                <span class="star">&#9734;</span> <!-- Empty star -->
+                            </c:otherwise>
+                        </c:choose>
+                    </c:otherwise>
+                </c:choose>
+            </c:forEach>
+        </div>
+        <div class="review-content">${review.content}</div>
+        <div class="review-date">${review.createdAt}</div>
+    </div>
+</c:forEach>
+</div>
+
 	<%@ include file="../layout/footer.jsp"%>
